@@ -1,3 +1,5 @@
+import { MDXRemote } from "next-mdx-remote/rsc"
+
 interface Props {
   params: {
     id: string,
@@ -19,6 +21,12 @@ export default function DemoPage({ params }: Props) {
     <>
       <p>Default Page (not intercepted)</p>
       <p>ID: {params.id}</p>
+      {/* @ts-ignore Server Component */}
+      <MDXRemote
+        source={`# Hello World
+
+        This is from Server Components!
+      `} />
     </>
   )
 }
