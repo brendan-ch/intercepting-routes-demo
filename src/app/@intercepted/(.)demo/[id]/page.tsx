@@ -4,10 +4,10 @@ interface Props {
   },
 }
 
-export default function ModalPage({ params }: Props) {
+export default function InterceptedPage({ params }: Props) {
   return (
     <>
-      <p>Modal Page</p>
+      <p>Intercepted Page</p>
       <p>ID: {params.id}</p>
     </>
   )

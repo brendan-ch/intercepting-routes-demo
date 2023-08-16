@@ -2,10 +2,10 @@ interface LayoutProps {
   children: React.ReactNode,
 }
 
-export default function ModalLayout({ children }: LayoutProps) {
+export default function InterceptedLayout({ children }: LayoutProps) {
   return (
     <div>
-      <p>Modal Layout</p>
+      <p>Intercepted Layout</p>
       {children}
     </div>
   )
