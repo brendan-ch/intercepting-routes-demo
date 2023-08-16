@@ -11,16 +11,16 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-  modal,
+  intercepted,
 }: {
   children: React.ReactNode
-  modal: React.ReactNode,
+  intercepted: React.ReactNode,
 }) {
   return (
     <html lang="en">
       <body className={inter.className}>
         {children}
-        {modal}
+        {intercepted}
       </body>
     </html>
   )
