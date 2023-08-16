@@ -4,6 +4,8 @@ interface Props {
   },
 }
 
+export const dynamicParams = false
+
 export async function generateStaticParams() {
   const ids = ['1', '2', '3']
 
