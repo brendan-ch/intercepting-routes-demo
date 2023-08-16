@@ -5,7 +5,7 @@ interface LayoutProps {
 export default function DemoLayout({ children }: LayoutProps) {
   return (
     <div>
-      <p>Demo Layout Outside Modal</p>
+      <p>Default Layout (not intercepted)</p>
       {children}
     </div>
   )

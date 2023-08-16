@@ -7,7 +7,7 @@ interface Props {
 export default function DemoPage({ params }: Props) {
   return (
     <>
-      <p>Demo Page Outside Modal</p>
+      <p>Default Page (not intercepted)</p>
       <p>ID: {params.id}</p>
     </>
   )
