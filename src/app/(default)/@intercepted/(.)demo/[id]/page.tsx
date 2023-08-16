@@ -1,5 +1,4 @@
 import MDXContent from "@/app/MDXContent"
-import { MDXRemote } from "next-mdx-remote/rsc"
 import { serialize } from "next-mdx-remote/serialize"
 
 interface Props {
