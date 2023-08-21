@@ -8,15 +8,15 @@ interface Props {
   },
 }
 
-export const dynamicParams = false
+// export const dynamicParams = false
 
-export async function generateStaticParams() {
-  const ids = ['1', '2', '3']
+// export async function generateStaticParams() {
+//   const ids = ['1', '2', '3']
 
-  return ids.map((id) => ({
-    id,
-  }))
-}
+//   return ids.map((id) => ({
+//     id,
+//   }))
+// }
 
 export default async function DemoPage({ params }: Props) {
   const source = 'Some **mdx** text'
