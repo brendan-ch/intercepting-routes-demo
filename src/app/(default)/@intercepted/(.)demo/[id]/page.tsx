@@ -1,4 +1,5 @@
 import MDXContent from "@/app/MDXContent"
+import { compileMDX } from "next-mdx-remote/rsc"
 import { serialize } from "next-mdx-remote/serialize"
 
 interface Props {
@@ -20,15 +21,26 @@ export async function generateStaticParams() {
 export default async function InterceptedPage({ params }: Props) {
   const source = 'Some **mdx** text'
   const serialized = await serialize(source)
+
+  const { content } = await compileMDX({
+    source,
+    options: {
+      parseFrontmatter: true,
+      mdxOptions: {
+        
+      },
+    },
+  })
   
   return (
     <>
       <p>Intercepted Page</p>
       <p>ID: {params.id}</p>
       {/* @ts-ignore Server Component */}
-      <MDXContent
+      {/* <MDXContent
         source={serialized}
-      />
+      /> */}
+      {content}
     </>
   )
 }
