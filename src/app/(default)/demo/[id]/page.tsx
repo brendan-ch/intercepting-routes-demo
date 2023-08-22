@@ -19,6 +19,7 @@ interface Props {
 // }
 
 export default async function DemoPage({ params }: Props) {
+  console.log('Generating default page...')
   const source = 'Some **mdx** text'
   const serialized = await serialize(source)
 
