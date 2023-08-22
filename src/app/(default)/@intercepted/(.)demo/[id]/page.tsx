@@ -37,10 +37,13 @@ export default async function InterceptedPage({ params }: Props) {
     <>
       <p>Intercepted Page</p>
       <p>ID: {params.id}</p>
-      {/* @ts-ignore Server Component */}
-      {/* <MDXContent
+      <br />
+      <p>Content rendered with client-side component:</p>
+      <MDXContent
         source={serialized}
-      /> */}
+      />
+      <br />
+      <p>Content rendered with server-side component:</p>
       {content}
     </>
   )
